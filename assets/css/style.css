@@ -362,16 +362,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Inicio Section
 --------------------------------------------------------------*/
-#hero {
+#inicio {
   width: 100%;
   height: calc(100vh - 110px);
   background: url("../img/home.jpg") top center;
   background-size: cover;
   position: relative;
 }
-#hero:before {
+#inicio:before {
   content: "";
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
-#hero h1 {
+#inicio h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -388,12 +388,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: #fff;
 }
-#hero h2 {
+#inicio h2 {
   color: #eee;
   margin-bottom: 30px;
   font-size: 24px;
 }
-#hero .btn-get-started {
+#inicio .btn-get-started {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -405,27 +405,27 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #fff;
   color: #fff;
 }
-#hero .btn-get-started:hover {
+#inicio .btn-get-started:hover {
   background: #cc1616;
   border-color: #cc1616;
 }
 @media (min-width: 1024px) {
-  #hero {
+  #inicio {
     background-attachment: fixed;
   }
 }
 @media (max-width: 768px) {
-  #hero {
+  #inicio {
     text-align: center;
   }
-  #hero .container {
+  #inicio .container {
     padding-top: 40px;
   }
-  #hero h1 {
+  #inicio h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  #inicio h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
