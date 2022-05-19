@@ -1149,12 +1149,13 @@ section {
   padding: 10px 15px;
 }
 .contact .php-email-form textarea {
-  padding: 12px 30px;
+  padding: 12px 15px;
 }
 .contact .php-email-form .boton {
   background: #cc1616;
   border: 0;
   padding: 10px 24px;
+  margin: 20px 20px;
   color: #fff;
   transition: 0.4s;
 }
