@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   background: #cc1616;
-  color: #333;
+  color: #fff;
 }
 .navbar .dropdown ul {
   display: block;
