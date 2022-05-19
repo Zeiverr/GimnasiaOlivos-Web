@@ -141,7 +141,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form class="php-email-form" id="contact-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo" required>
@@ -156,18 +156,45 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Cargando</div>
-                <div class="error-message">¡ERROR! Su mensaje NO se ha podido enviar. Vuelva a intentarlo.</div>
-                <div class="sent-message">Su mensaje se ha enviado. ¡Gracias por su consulta!</div>
-              </div>
-              <div class="text-center"><input type="submit" id="button" class="boton" value="Enviar"></div>
+              <div class="text-center"><input type="submit" id="button" value="Enviar" class="boton"></div>
             </form>
             
+            
+            <!--------------------------------------------- SCRIPTS DEL FORMULARIO --------------------------------------------->
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            
             <script type="text/javascript">
-              emailjs.init('iXapLEQOyQ8G3upsX')
+                (function() {
+                  // https://dashboard.emailjs.com/admin/account
+                  emailjs.init('iXapLEQOyQ8G3upsX');
+                })();
             </script>
+            
+            <script type="text/javascript">
+              (function() {
+                  const btn = document.getElementById('button');
+
+                  document.getElementById('contact-form')
+                  .addEventListener('submit', function(event) {
+                   event.preventDefault();
+                
+                   btn.value = 'Enviando...';
+                
+                   const serviceID = 'default_service';
+                   const templateID = 'template_kk33qae';
+                   
+                   emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                       btn.value = 'Enviar';
+                       alert('¡Su mensaje se ha enviado correctamente!');
+                    }, (err) => {
+                      btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                    });
+                });
+               })();
+          </script>
+          <!----------------------------------- ********************** ----------------------------------->
             
           </div>
 
