@@ -7,17 +7,17 @@
   .addEventListener('submit', function(event) {
     event.preventDefault();
 
-    btn.value = 'Sending...';
+    btn.value = 'Enviando...';
 
     const serviceID = 'default_service';
     const templateID = 'template_kk33qae';
 
     emailjs.sendForm(serviceID, templateID, this)
      .then(() => {
-       btn.value = 'Send Email';
-       alert('Sent!');
+       btn.value = 'Enviar';
+       alert('¡Su mensaje se ha enviado correctamente!');
      }, (err) => {
-       btn.value = 'Send Email';
+       btn.value = 'Enviar';
        alert(JSON.stringify(err));
      });
  });
