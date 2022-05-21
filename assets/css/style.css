@@ -112,6 +112,13 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
+
+@media (max-width: 405px) {
+  #topbar .mobiless #topmail{
+    visibility: hidden;
+  }
+}
+
 #topbar {
   background: #191919;
   font-size: 15px;
